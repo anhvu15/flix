@@ -1,0 +1,1 @@
+Time:: DATE_FORMATS[:usa_display] = '%m %d %y'

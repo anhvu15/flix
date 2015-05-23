@@ -1,0 +1,19 @@
+<h2><%=@movie.title %></h2>
+<p><%=@movie.description %></p>
+<table class="show-movie">
+	<tbody>
+		<tr>
+			<th>Rating</th>
+			<td><%=@movie.rating %></td>
+		</tr>
+		<tr>
+			<th>Released On</th>
+			<td><%=display_usa_date(@movie.released_on) %></td>
+		</tr>
+		<tr>
+			<th>Total Gross</th>
+			<td><%=display_currency(@movie) %></td>
+		</tr>
+	</tbody>
+</table>
+<p><%= link_to "All Movies", movies_path %></p>

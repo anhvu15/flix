@@ -1,0 +1,10 @@
+<h1><%=show_total(@movies) %></h1>
+	<ul>
+		<% @movies.each do |movie| %>
+			<li><%= link_to movie.title, movie %></li>			
+			<li><%=truncate movie.description,length: 17,separator: ' ' %></li>			
+			<li><%=movie.rating %></li>
+			<li><%= movie.released_on %></li>
+			<li><%=number_to_currency movie.total_gross %></li>
+		<% end %>
+	</ul>
